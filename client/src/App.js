@@ -6,10 +6,10 @@ import Launch from './components/Launch'
 export function App() {
   return (
     <>
-      <div>SpaceX</div>
       <Routes>
         <Route path="/" element={<Launches></Launches>}></Route>
         <Route path="/launch/:flight_number" element={<Launch></Launch>} />
+        <Route path="*" element={<Launches></Launches>}></Route>
       </Routes>
     </>
   )

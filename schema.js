@@ -10,7 +10,19 @@ const LaunchType = new GraphQLObjectType({
     launch_year: { type: GraphQLString },
     launch_date_local: { type: GraphQLString },
     launch_success: { type: GraphQLBoolean },
-    rocket: { type: RocketType }
+    rocket: { type: RocketType },
+    links: { type: MediaType },
+    details: { type: GraphQLString }
+  })
+})
+
+const MediaType = new GraphQLObjectType({
+  name: 'Media',
+  fields: () => ({
+    presskit: { type: GraphQLString },
+    article_link: { type: GraphQLString },
+    wikipedia: { type: GraphQLString },
+    video_link: { type: GraphQLString }
   })
 })
 
